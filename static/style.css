@@ -55,7 +55,7 @@ button:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: fit-content;
+    width: 50%; /* Adjust the width as needed */
 }
 
 /* Other styles... */
@@ -68,12 +68,16 @@ button:hover {
     height: 300px; /* Adjust the height as needed */
 }
 
+.urlText {
+    width: 50%;
+}
+
 #result code {
     background-color: #eee;
     padding: 10px;
     border-radius: 4px;
     display: inline-block;
-    width: fit-content;
+    width: 50%;
 }
 
 #result button {
