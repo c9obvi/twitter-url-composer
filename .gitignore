@@ -10,4 +10,5 @@ venv/
 # Ignore Selenium WebDrivers
 drivers/
 
-#ingore 
+#ingore backup files
+working-code-backup.py

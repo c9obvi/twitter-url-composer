@@ -50,11 +50,14 @@ def create_twitter_url(headless=False):
     print("Choose the action:")
     print("1) Follow a user")
     print("2) DM a user")
-    print("3) Tweet out a pre-populated text")
+    print("3) Tweet out a pre-populated tweet")
     
     choice = input("Enter your choice (1, 2, or 3): ")
-    username = input("Enter the Twitter username: ")
-    user_id = get_user_id_from_twitvd(username, headless=headless)
+
+    user_id = None
+    if choice in ['1', '2']:
+        username = input("Enter the Twitter username: ")
+        user_id = get_user_id_from_twitvd(username, headless=headless)
 
     if choice == '1':
         url = f"https://twitter.com/intent/follow?user_id={user_id}"

@@ -38,44 +38,25 @@ def get_user_id_from_twitvd(username, headless=False):
         # Extract the user ID using regular expression
         match = re.search(r'is (\d+)', result_text)
         if match:
-            user_id = match.group(1)
-            return user_id
+            return match.group(1)
         else:
             return "User ID not found."
     finally:
         # Close the browser
         driver.quit()
 
-def create_twitter_url(headless=False):
-    print("Choose the action:")
-    print("1) Follow a user")
-    print("2) DM a user")
-    print("3) Tweet out a pre-populated tweet")
-    
-    choice = input("Enter your choice (1, 2, or 3): ")
-
+def create_twitter_action_url(choice, username=None, message=None, headless=False):
     user_id = None
     if choice in ['1', '2']:
-        username = input("Enter the Twitter username: ")
         user_id = get_user_id_from_twitvd(username, headless=headless)
 
-    if choice == '1':
-        url = f"https://twitter.com/intent/follow?user_id={user_id}"
-    elif choice == '2':
-        message = input("Enter the message to send (optional, press enter to skip): ")
+    if choice == '1' and user_id:
+        return f"https://twitter.com/intent/follow?user_id={user_id}"
+    elif choice == '2' and user_id:
         encoded_message = urllib.parse.quote_plus(message)
-        url = f"https://twitter.com/messages/compose?recipient_id={user_id}&text={encoded_message}"
+        return f"https://twitter.com/messages/compose?recipient_id={user_id}&text={encoded_message}"
     elif choice == '3':
-        message = input("Enter the text to tweet (optional, press enter to skip): ")
         encoded_message = urllib.parse.quote_plus(message)
-        url = f"https://twitter.com/intent/tweet?text={encoded_message}"
-    else:
-        return "Invalid choice. Please enter 1, 2, or 3."
+        return f"https://twitter.com/intent/tweet?text={encoded_message}"
 
-    return url
-
-# Set headless to True or False based on your preference
-headless_mode = True
-
-# Example usage
-print(create_twitter_url(headless=headless_mode))
+    return None

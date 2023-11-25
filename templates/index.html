@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter URL Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Twitter/𝕏 URL Composer</h1>
+    <h3>Enter a Twitter username and choose an action to generate a URL that will perform that action when clicked.</h3>
+    <form id="actionForm">
+        <div>
+            <label for="choice">Choose an action:</label>
+            <select id="choice" name="choice">
+                <option value="1">Follow a user</option>
+                <option value="2">DM a user</option>
+                <option value="3">Tweet out a pre-populated tweet</option>
+            </select>
+        </div>
+        <div>
+            <label for="username">Twitter Username:</label>
+            <input type="text" id="username" name="username">
+        </div>
+        <div>
+            <label for="message">Message (optional):</label>
+            <input type="text" id="message" name="message">
+        </div>
+        <div>
+            <button type="submit" id="submitBtn">Submit</button>
+        </div>
+    </form>
+    <!--style="display: none;"-->
+    <div id="loading" style="display: none;">
+        <dotlottie-player src="https://lottie.host/a0f4d2df-31dc-48f4-8877-1271e24258f0/1muNOlEwAG.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+    </div>
+<br>
+    <div id="result" style="display: none;"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+</html>
