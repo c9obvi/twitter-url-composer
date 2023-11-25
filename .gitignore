@@ -1,7 +1,7 @@
 # ingnore note taking place
 notes.txt
 
-# Ignore environment variables
+# Ignore environment variables in case you exand this project
 .env
 
 # Ignore Python virtual environment
@@ -9,3 +9,5 @@ venv/
 
 # Ignore Selenium WebDrivers
 drivers/
+
+#ingore 
