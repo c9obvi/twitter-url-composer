@@ -1,0 +1,11 @@
+# ingnore note taking place
+notes.txt
+
+# Ignore environment variables
+.env
+
+# Ignore Python virtual environment
+venv/
+
+# Ignore Selenium WebDrivers
+drivers/

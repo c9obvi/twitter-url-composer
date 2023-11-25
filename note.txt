@@ -1,0 +1,21 @@
+url = f"
+https://twitter.com/messages/compose?recipient_id={user_id}&text={encoded_message}
+
+
+https://twitter.com/messages/compose?recipient_id=828337820355866624&text=hi
+https://twitter.com/messages/compose?recipient_id=1557949531504775168&text=hi
+
+
+
+
+828337820355866624 0xberto user_id
+
+
+inspecting my home feed 
+<a href="/i/connect_people?user_id=828337820355866624" role="link" class="css-175oi2r r-ymttw5 r-1yzf0co r-1moyyf3 r-1pp923h r-o7ynqc r-6416eg r-1ny4l3l r-1loqt21"><div dir="ltr" class="css-1rynq56 r-bcqeeo r-qvutc0 r-37j5jr r-a023e6 r-rjixqe r-16dba41" style="color: rgb(29, 155, 240); text-overflow: unset;"><span class="css-1qaijid r-bcqeeo r-qvutc0 r-poiln3" style="text-overflow: unset;">Show more</span></div></a>
+
+
+<meta content="333903271" property="al:ios:app_store_id" data-rh="true">
+
+
+pip install -r requirements.txt
