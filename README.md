@@ -35,7 +35,7 @@ To set up the Twitter URL Composer locally, follow these steps:
     ```
     flask run
     ```
-   [!TIP]
+  > [!TIP]
    If you run into jinja2 / flask issues: 
    ```
    pip install --upgrade flask jinja2
@@ -48,6 +48,3 @@ Contributions to the Twitter URL Composer are welcome! Feel free to open an issu
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
-
-[!TIP]
-Optional information to help a user be more successful.
