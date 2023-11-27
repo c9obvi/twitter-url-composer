@@ -21,7 +21,7 @@ To set up the Twitter URL Composer locally, follow these steps:
 
 1. Clone the repository:
     ```
-    git clone https://github.com/yourusername/twitter-url-composer.git
+    git clone https://github.com/c9obvi/twitter-url-composer.git
     ```
 2. Navigate to the project directory:
     ```
