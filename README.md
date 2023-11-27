@@ -35,7 +35,8 @@ To set up the Twitter URL Composer locally, follow these steps:
     ```
     flask run
     ```
-   [!IMPORTANT]  If you run into jinja2 / flask issues: 
+   [!IMPORTANT]
+   If you run into jinja2 / flask issues: 
    ```
    pip install --upgrade flask jinja2
    ```
